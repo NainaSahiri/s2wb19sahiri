@@ -1,0 +1,9 @@
+extends layout
+block content
+  h1= title
+  -let results = [{animal_name:"Dog", animal_breed:"Husky",animal_weight:18},{animal_name:"Monkey", animal_breed:"Chimpanzee",animal_weight:8},{animal_name:"Dog", animal_breed:"Husky",animal_weight:12}]
+  div(class="container-fluid")
+  div(class="row")
+    -
+    each item in results 
+        div(class="col-sm-2") #{item.animal_name} #{item.animal_breed} #{item.animal_weight}
